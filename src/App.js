@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import './components/Banner'
+import { useState } from 'react';
+import Banner from './components/Banner';
+import Form from './components/Form';
 
 function App() {
+
+  const [peoples, setPeople] = useState([])
+  
+  console.log(peoples)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, world <code>src/App.js</code>.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Banner />
+        <Form onAddPeople={people => [setPeople([...peoples, people])]}/>
     </div>
   );
 }

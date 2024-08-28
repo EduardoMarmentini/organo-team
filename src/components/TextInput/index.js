@@ -1,11 +1,15 @@
 import './InputText.css'
 
 const InputText = (props) => {
-    console.log(props.label)
+
+    const onType = (event) => {
+        props.onChanged(event.target.value)
+    }
+
     return (
         <div className="input-text">
             <label>{props.label}</label>
-            <input placeholder={props.placeholder}/>
+            <input value={props.value} onChange={onType} required={props.req} placeholder={props.placeholder}/>
         </div>
     )
 }

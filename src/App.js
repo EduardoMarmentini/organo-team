@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import Banner from './components/Banner';
-import InputText from './components/TextInput';
+import Form from './components/Form';
 
 function App() {
+
+  const [peoples, setPeople] = useState([])
+  
+  console.log(peoples)
+
   return (
     <div className="App">
         <Banner />
-        <InputText lable="Nome" placeholder = ""/>
-        <InputText lable="Cargo"/>
-        <InputText lable="Imagem"/>
+        <Form onAddPeople={people => [setPeople([...peoples, people])]}/>
     </div>
   );
 }

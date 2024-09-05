@@ -5,16 +5,7 @@ import Button from '../Button';
 import { useState } from 'react';
 
 const Form = (props) => {
-    const times = [
-        "Selecione",
-        "CEOs",
-        "Gestores",
-        "Desenvolvimento",
-        "Marketing (MKT)",
-        "Vendas",
-        "Contabilidade"
-    ]
-
+    
     const [name, setName] = useState('')
     const [position, setPosition] = useState('')
     const [image, setImage] = useState('')
@@ -58,7 +49,7 @@ const Form = (props) => {
                 <DropDown  
                     req={true} 
                     label="Equipes" 
-                    itens={times}
+                    itens={props.teams}
                     value={team}
                     onChanged={val => setTeam(val)}
 

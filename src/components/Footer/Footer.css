@@ -1,0 +1,29 @@
+.footer {
+    background-color: #6278F7; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #FFF;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer .box-social{
+    color: #FFF;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+.footer p{
+    font-size: 20px;
+}

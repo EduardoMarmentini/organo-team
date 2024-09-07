@@ -1,14 +1,16 @@
 import "./Card.css"
 
-const Card = (props) => {
+const Card = ({name, url_img, position, backgroundColor}) => {
     return (
         <div className="card">
-            <div className="header">
-                <img src={props.url_img} alt={props.name}/>
+            <div className="header" style={{
+                "--team-bg-color": backgroundColor
+            }}>
+                <img src={url_img} alt={name}/>
             </div>
-            <div className="footer">
-                <h4>{props.name}</h4>
-                <h5>{props.position}</h5>
+            <div className="data">
+                <h4>{name}</h4>
+                <h5>{position}</h5>
             </div>
         </div>
     )
